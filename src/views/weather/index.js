@@ -22,17 +22,15 @@ class Weather extends Component{
 
   getWeather = async(e) => {
     e.preventDefault();
-
     let city = e.target.elements.city.value;
     let country = e.target.elements.country.value;
-
     if (country === '' || country === null) {
       country = 'US';
     }
-    
+    console.log('test');
     const URL = `http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&APPID=${this.state.API_KEY}&units=imperial`;
 
-    let response = await fetch(URL)
+    let response = await fetch(URL);
 
     let data  = await response.json();
 

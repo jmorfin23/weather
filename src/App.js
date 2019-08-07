@@ -3,6 +3,8 @@ import './App.css';
 import { Switch, Route } from 'react-router-dom';
 import Weather from './views/weather'; // no need to put index.js
 import Header from './components/header';
+import Animal from './views/animal';
+import Racer from './views/racer';
 
 class App extends Component{
   render() {
@@ -14,11 +16,12 @@ class App extends Component{
         <div className="container">
           <Switch>
           <Route exact path='/' render={() => <Weather />} />
-          <Route exact path='racer' render={() => <h1>Render the racer component here</h1>} />
+          <Route exact path='/racer' render={() => <Racer />} />
+          <Route exact path='/animal' render={() => <Animal />} />
           </Switch>
           </div>
         </main>
-      </div> 
+      </div>
     );
   }
 }

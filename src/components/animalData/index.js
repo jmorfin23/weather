@@ -10,8 +10,8 @@ class AnimalData extends Component{
 
     return (
     <div className="AnimalData">
-    <div className="makebigger"> {name} </div>
-    <div className="makebigger"> {species} </div>
+      <div className="makebigger"> {name} </div>
+      <div className="makebigger"> {species} </div>
     </div>
     );
   }

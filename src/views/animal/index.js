@@ -12,7 +12,7 @@ class Animal extends Component{
       'species': ''
     }
   }
-  // ?question async function again.
+  
   getData = async(e) => {
     //preventing refresh
     e.preventDefault()
@@ -36,12 +36,12 @@ class Animal extends Component{
   render() {
     return (
     <div className="Animal">
-    <div>
-    <AnimalForm getData={this.getData} />
-    </div>
-    <div>
-      <AnimalData name={this.state.name} species={this.state.species}/>
-    </div>
+      <div>
+        <AnimalForm getData={this.getData} />
+      </div>
+      <div>
+        <AnimalData name={this.state.name} species={this.state.species}/>
+      </div>
     </div>
     );
   }
